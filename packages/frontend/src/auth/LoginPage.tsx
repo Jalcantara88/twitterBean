@@ -32,6 +32,7 @@ export default function LoginPage() {
 
     try {
       const user = await login(handle, password);
+      //.then(res => console.log(res));
       dispatch({
         type: "setUser",
         payload: user,

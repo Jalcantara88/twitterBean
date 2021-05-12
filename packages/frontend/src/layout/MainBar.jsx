@@ -3,7 +3,7 @@ import React from "react";
 
 export default function LeftBar({ children }) {
   return (
-    <Grid item xs={4}>
+    <Grid item xs={5}>
       {children}
     </Grid>
   );

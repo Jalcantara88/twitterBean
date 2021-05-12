@@ -1,11 +1,13 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { AppBar, Grid, Typography } from "@material-ui/core";
 
 import MainBar from "./layout/MainBar";
 import LeftBar from "./layout/LeftBar";
+import NavBar from "./layout/NavBar";
 import RightBar from "./layout/RightBar";
 import BottomBar from './layout/BottomBar';
+
 
 
 import LoginPage from "./auth/LoginPage";
@@ -17,14 +19,14 @@ import StateProvider, { StateContext } from "./StateProvider";
 import { checkSession } from "./auth/authApi";
 
 export default function App() {
+
   return (
     <StateProvider>
-      <AppBar position="static" style={{ marginBottom: 24 }}>
-        <Typography variant="h6" style={{ padding: 12 }}>
-          Twitterbean
-        </Typography>
-      </AppBar>
+
       <Router>
+        <div className="w-100 py-2">
+          
+        </div>
         <Switch>
           <Route path="/auth/login">
             <LoginPage />
@@ -34,11 +36,11 @@ export default function App() {
           </Route>
           <Route>
             <Grid container>
-              <LeftBar />
+              <LeftBar/>
               <MainBar>
                 <Switch>
                   <Route path="/" exact>
-                    <FeedPage />
+                    <FeedPage/>
                   </Route>
                   <Route path="/auth/logout">
                     <LogoutPage />
@@ -46,12 +48,14 @@ export default function App() {
                   <Route component={NotFoundPage} />
                 </Switch>
               </MainBar>
-              <RightBar />
+
               <BottomBar />
+              <NavBar/>
             </Grid>
           </Route>
         </Switch>
       </Router>
+
     </StateProvider>
   );
 }

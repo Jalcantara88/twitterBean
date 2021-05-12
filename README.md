@@ -1,6 +1,8 @@
-# Social Media Site Hackathon - Starter Pack
+# Twitter Clone - Mintebean Social Site Hack-A-Thon
 
-This starter pack is for the "How to build a social media site" hackathon by Mintbean.
+This is a simply social media "tweet" like structured site. 
+
+
 
 ## Prerequisites
 

@@ -21,7 +21,7 @@ export default function BottomBar() {
                             setValue(newValue);
                         }}
                         showLabels
-                        className="bg-danger"
+                        
                     >
                         <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
                         <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
