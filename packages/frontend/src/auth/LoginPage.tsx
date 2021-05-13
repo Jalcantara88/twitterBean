@@ -1,4 +1,4 @@
-import { FormControl, Grid, Input, Box, Typography, Snackbar } from "@material-ui/core";
+import { FormControl, Grid, Input, Box, Typography, Snackbar, Paper } from "@material-ui/core";
 import {Alert, AlertTitle} from '@material-ui/lab';
 import React, { useContext, useState } from "react";
 import { StateContext, ContextType } from "../StateProvider";
@@ -62,10 +62,16 @@ export default function LoginPage() {
         <Grid container>
           <Grid item xs={2}></Grid>
           <Grid item xs={10}>
-            <Typography variant="h4">Welcome to Twitterbean!</Typography>
-            <Typography variant="h6">Make new friends!</Typography>
-            <Typography variant="h6">Talk about things!</Typography>
-            <Typography variant="h6">Be part of a community!</Typography>
+            <Paper  
+                className="p-3 text-dark"
+                elevation={3}
+              
+              >
+              <Typography variant="h4">Welcome to BeansTalk!</Typography>
+              <Typography variant="h6">Plant A Bean!</Typography>
+              <Typography variant="h6">Watch It Grow!</Typography>
+              <Typography variant="h6">Live Among The Giants!</Typography>
+            </Paper>
           </Grid>
         </Grid>
       </Grid>

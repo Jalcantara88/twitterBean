@@ -20,12 +20,14 @@ import { checkSession } from "./auth/authApi";
 
 export default function App() {
 
+  //console.log(state);
   return (
+    <div className="h-100">
     <StateProvider>
 
       <Router>
         <div className="w-100 py-2">
-          
+          <BottomBar />
         </div>
         <Switch>
           <Route path="/auth/login">
@@ -49,7 +51,7 @@ export default function App() {
                 </Switch>
               </MainBar>
 
-              <BottomBar />
+              
               <NavBar/>
             </Grid>
           </Route>
@@ -57,5 +59,6 @@ export default function App() {
       </Router>
 
     </StateProvider>
+    </div>
   );
 }

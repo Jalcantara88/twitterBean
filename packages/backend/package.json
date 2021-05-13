@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "beans-talk-backend",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Monarch Wadia",
+  "author": "Julio Alcantara",
   "license": "MIT",
   "scripts": {
     "start": "ts-node index.js",

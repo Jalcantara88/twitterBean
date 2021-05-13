@@ -40,7 +40,7 @@ export default function NavBar() {
 
   return (
     <>
-      <AppBar position="static" style={{ backgroundColor: " #7b241c "}}>
+      <AppBar position="static" style={{ backgroundColor: "#734b6d ", bottom: "0", position: "absolute"}}>
         <div className="container">
           <div className="row">
             <div className="col-4">
