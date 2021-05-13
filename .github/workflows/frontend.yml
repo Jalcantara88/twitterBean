@@ -1,0 +1,19 @@
+name: Deploy to Heroku (Frontend)
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "packages/frontend/**"
+      - ".github/workflows/frontend.yml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Add backend remote origin
+        run: git remote add heroku-frontend https://heroku:${{ secrets.60b67634-6d1e-4400-935e-d95777066937 }}@git.heroku.com/${{ secrets.BEANS_TALK_FRONTEND }}.git
+      - name: Deploy backend to Heroku
+        run: git push heroku-frontend `git subtree split --prefix backend master`:refs/heads/master --force
